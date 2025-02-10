@@ -11,6 +11,11 @@ export class Users {
   @Column({ unique: true })
   username: string;
 
+  @Column({
+    nullable: true
+  })
+  refresh_token?:string;
+
   @Column()
   password: string;
 }
